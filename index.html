@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WA Notif Vault</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📥 WA Notif Vault</h1>
+      <p class="subtitle">Histori notifikasi tersimpan dari HP kamu</p>
+    </header>
+
+    <section class="token-box" id="tokenBox">
+      <label for="tokenInput">Token API</label>
+      <input type="password" id="tokenInput" placeholder="Masukkan token dari .env" />
+      <button id="saveTokenBtn">Simpan</button>
+    </section>
+
+    <section class="import-box">
+      <label for="importFile">Import chat lama/arsip (file .txt dari Export Chat WhatsApp)</label>
+      <div class="import-row">
+        <input type="text" id="importChatName" placeholder="Nama kontak/grup" />
+        <input type="file" id="importFile" accept=".txt" />
+        <button id="importBtn">Import</button>
+      </div>
+      <p id="importStatus" class="import-status"></p>
+    </section>
+
+    <section class="controls">
+      <input type="text" id="searchInput" placeholder="Cari isi pesan atau nama kontak..." />
+      <select id="appFilter">
+        <option value="">Semua aplikasi</option>
+        <option value="WhatsApp">WhatsApp</option>
+      </select>
+      <button id="refreshBtn">🔄 Refresh</button>
+    </section>
+
+    <section id="list" class="list"></section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
